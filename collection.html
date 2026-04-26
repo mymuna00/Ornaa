@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orna Jewels - Collections</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS - Only for this page -->
+    <style>
+
+        /* --- PAGE HEADER --- */
+
+        .page-header {
+            width: 100%;
+            height: 380px;
+            background-color: #1A1209;
+            padding-top: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .page-header h3 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            color: #C9A84C;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 72px;
+            color: #FDF6EC;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        /* --- FILTER BAR --- */
+
+        .filterbar {
+            width: 100%;
+            height: 70px;
+            background-color: #F0E8D4;
+            border-bottom: 1px solid #DDD0B0;
+            display: flex;
+            align-items: center;
+        }
+
+        .filterbar-inner {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .filterbar-inner p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            color: #6A6050;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 30px;
+        }
+
+        .filter-btn {
+            height: 38px;
+            padding-left: 22px;
+            padding-right: 22px;
+            background-color: transparent;
+            border: 1px solid #C9A84C;
+            color: #1A1209;
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .filter-btn.selected {
+            background-color: #C9A84C;
+            color: #1A1209;
+            font-weight: 600;
+        }
+
+        /* --- PRODUCT GRID SECTION --- */
+
+        .shop-section {
+            width: 100%;
+            padding-top: 80px;
+            padding-bottom: 100px;
+            background-color: #FDF6EC;
+        }
+
+        .section-label {
+            width: 1200px;
+            margin: auto;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-label h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 38px;
+            color: #1A1209;
+            letter-spacing: 2px;
+        }
+
+        .section-label .label-line {
+            height: 1px;
+            background-color: #DDD0B0;
+            width: 700px;
+            margin-left: 30px;
+        }
+
+        /* Product grid - 4 columns using flex and wrap */
+
+        .product-grid {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .p-card {
+            width: 270px;
+            margin-bottom: 60px;
+        }
+
+        .p-card-image {
+            width: 270px;
+            height: 320px;
+            background-color: #EDE4D4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .p-card-image p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 11px;
+            color: #A89870;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .p-card h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            color: #1A1209;
+            margin-bottom: 5px;
+        }
+
+        .p-card .p-metal {
+            font-family: "Work Sans", sans-serif;
+            font-size: 11px;
+            color: #C9A84C;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .p-card .p-price {
+            font-family: "Work Sans", sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1A1209;
+        }
+
+        /* --- CUSTOM ORDER BANNER --- */
+
+        .custom-banner {
+            width: 100%;
+            height: 400px;
+            background-color: #1A1209;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .custom-banner-inner {
+            width: 700px;
+        }
+
+        .custom-banner-inner h3 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            color: #C9A84C;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .custom-banner-inner h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 52px;
+            color: #FDF6EC;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .custom-banner-inner p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 15px;
+            color: #9A8F7A;
+            line-height: 26px;
+            margin-bottom: 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!-- ===================== NAVIGATION ===================== -->
+
+<div class="navbar">
+    <div class="nav-inner">
+
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: #C9A84C;">ORNA<span style="color: #ffffff;">.</span></a></div>
+
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html" class="active">Collections</a></li>
+                <li><a href="contact.html">Custom Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===================== NAVIGATION END ===================== -->
+
+
+<!-- ===================== PAGE HEADER ===================== -->
+
+<div class="page-header">
+    <div>
+        <h3>Orna Jewels</h3>
+        <h1>Our Collections</h1>
+    </div>
+</div>
+
+<!-- ===================== PAGE HEADER END ===================== -->
+
+
+<!-- ===================== FILTER BAR ===================== -->
+
+<div class="filterbar">
+    <div class="filterbar-inner">
+        <p>Filter :</p>
+        <button class="filter-btn selected">All</button>
+        <button class="filter-btn">Gold</button>
+        <button class="filter-btn">Diamond</button>
+        <button class="filter-btn">Platinum</button>
+        <button class="filter-btn">Silver</button>
+        <button class="filter-btn">Heritage</button>
+        <button class="filter-btn">Custom</button>
+    </div>
+</div>
+
+<!-- ===================== FILTER BAR END ===================== -->
+
+
+<!-- ===================== GOLD COLLECTION ===================== -->
+
+<div class="shop-section">
+
+    <!-- Section heading -->
+    <div class="section-label">
+        <h2>Gold Collection</h2>
+        <div class="label-line"></div>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/prod-gold-necklace.jpg" alt="Shona Haar Necklace"></div>
+            <h4>Shona Haar Necklace</h4>
+            <p class="p-metal">22K Gold</p>
+            <p class="p-price">৳ 85,000</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/gold-bangles.jpg" alt="Chand Bali Bangles"></div>
+            <h4>Chand Bali Bangles</h4>
+            <p class="p-metal">18K Gold</p>
+            <p class="p-price">৳ 62,000</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/gold-earrings.jpg" alt="Jhumka Drop Earrings"></div>
+            <h4>Jhumka Drop Earrings</h4>
+            <p class="p-metal">22K Gold</p>
+            <p class="p-price">৳ 34,500</p>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/gold-ring.jpg" alt="Classic Band Ring"></div>
+            <h4>Classic Band Ring</h4>
+            <p class="p-metal">18K Gold</p>
+            <p class="p-price">৳ 28,000</p>
+        </div>
+
+    </div>
+
+
+    <!-- Diamond Section -->
+    <div class="section-label" style="margin-top: 20px;">
+        <h2>Diamond Collection</h2>
+        <div class="label-line"></div>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 5 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/prod-diamond-ring.jpg" alt="Solitaire Engagement Ring"></div>
+            <h4>Solitaire Engagement Ring</h4>
+            <p class="p-metal">Platinum + Diamond</p>
+            <p class="p-price">৳ 2,10,000</p>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/diamond-pendant.jpg" alt="Teardrop Pendant"></div>
+            <h4>Teardrop Pendant</h4>
+            <p class="p-metal">18K Gold + Diamond</p>
+            <p class="p-price">৳ 1,40,000</p>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/diamond-studs.jpg" alt="Stud Earrings Pair"></div>
+            <h4>Stud Earrings Pair</h4>
+            <p class="p-metal">White Gold + Diamond</p>
+            <p class="p-price">৳ 95,000</p>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/diamond-bracelet.jpg" alt="Tennis Bracelet"></div>
+            <h4>Tennis Bracelet</h4>
+            <p class="p-metal">Platinum + Diamond</p>
+            <p class="p-price">৳ 3,50,000</p>
+        </div>
+
+    </div>
+
+
+    <!-- Platinum Section -->
+    <div class="section-label" style="margin-top: 20px;">
+        <h2>Platinum Series</h2>
+        <div class="label-line"></div>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 9 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/platinum-ring.jpg" alt="Modern Couple Band"></div>
+            <h4>Modern Couple Band</h4>
+            <p class="p-metal">Platinum 950</p>
+            <p class="p-price">৳ 1,20,000</p>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/platinum-chain.jpg" alt="Flat Link Chain"></div>
+            <h4>Flat Link Chain</h4>
+            <p class="p-metal">Platinum 950</p>
+            <p class="p-price">৳ 88,000</p>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/platinum-bracelet.jpg" alt="Box Chain Bracelet"></div>
+            <h4>Box Chain Bracelet</h4>
+            <p class="p-metal">Platinum 950</p>
+            <p class="p-price">৳ 76,000</p>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/platinum-earrings.jpg" alt="Geometric Drop Earrings"></div>
+            <h4>Geometric Drop Earrings</h4>
+            <p class="p-metal">Platinum 950</p>
+            <p class="p-price">৳ 65,000</p>
+        </div>
+
+    </div>
+
+
+    <!-- Heritage Section -->
+    <div class="section-label" style="margin-top: 20px;">
+        <h2>Bangladeshi Heritage</h2>
+        <div class="label-line"></div>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 13 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/prod-nakshi-bangle.jpg" alt="Nakshi Bangle Pair"></div>
+            <h4>Nakshi Bangle Pair</h4>
+            <p class="p-metal">Handmade — Silver</p>
+            <p class="p-price">৳ 12,500</p>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/heritage-necklace.jpg" alt="Tribal Coin Necklace"></div>
+            <h4>Tribal Coin Necklace</h4>
+            <p class="p-metal">Handmade — Brass</p>
+            <p class="p-price">৳ 8,200</p>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/heritage-earrings.jpg" alt="Terracotta Drop Earrings"></div>
+            <h4>Terracotta Drop Earrings</h4>
+            <p class="p-metal">Handmade — Terracotta</p>
+            <p class="p-price">৳ 3,800</p>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="p-card">
+            <div class="p-card-image"><img src="images/heritage-bracelet.jpg" alt="Jamdani Motif Bracelet"></div>
+            <h4>Jamdani Motif Bracelet</h4>
+            <p class="p-metal">Handmade — Silver</p>
+            <p class="p-price">৳ 9,500</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== PRODUCT GRID SECTION END ===================== -->
+
+
+<!-- ===================== CUSTOM ORDER BANNER ===================== -->
+
+<div class="custom-banner">
+    <div class="custom-banner-inner">
+        <h3>Design Your Own</h3>
+        <h2>Don't See What You Want?</h2>
+        <p>We make fully custom jewelry from your brief. Share your idea, metal preference and budget — and we'll create it for you.</p>
+        <a href="contact.html" class="btn-gold">Start a Custom Order</a>
+    </div>
+</div>
+
+<!-- ===================== CUSTOM ORDER BANNER END ===================== -->
+
+
+<!-- ===================== FOOTER ===================== -->
+
+<div class="footer">
+    <div class="footer-inner">
+
+        <div class="footer-col">
+            <h3>ORNA.</h3>
+            <p>Luxury and heritage jewelry from the heart of Bangladesh. Custom pieces made to your brief.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="contact.html">Custom Order</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Collections</h3>
+            <ul>
+                <li><a href="collection.html">Gold Jewelry</a></li>
+                <li><a href="collection.html">Diamond Collection</a></li>
+                <li><a href="collection.html">Platinum Series</a></li>
+                <li><a href="collection.html">Bangladeshi Heritage</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Dhaka, Bangladesh</p>
+            <br>
+            <p>ornajewels@gmail.com</p>
+            <br>
+            <p>+880 1700 000 000</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Orna Jewels. All rights reserved. &nbsp;|&nbsp; Handcrafted in Bangladesh</p>
+    </div>
+</div>
+
+<!-- ===================== FOOTER END ===================== -->
+
+
+</body>
+</html>

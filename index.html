@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orna Jewels - Home</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS - Only for this page -->
+    <style>
+
+        /* --- HERO BANNER --- */
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background-color: #1A1209;
+            padding-top: 90px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .hero-text {
+            width: 580px;
+        }
+
+        .hero-text h3 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 82px;
+            font-weight: 600;
+            color: #FDF6EC;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .hero-text h1 span {
+            color: #C9A84C;
+        }
+
+        .hero-text p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 16px;
+            color: #9A8F7A;
+            line-height: 28px;
+            margin-bottom: 44px;
+        }
+
+        .hero-buttons {
+            display: flex;
+        }
+
+        .hero-buttons a {
+            margin-right: 20px;
+        }
+
+        .hero-image-box {
+            width: 500px;
+            height: 560px;
+            margin-left: 120px;
+            background-color: #2E2416;
+            border: 1px solid #3A2E1A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-box p {
+            color: #5A4F38;
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* --- TRUST BAR --- */
+
+        .trustbar {
+            width: 100%;
+            height: 80px;
+            background-color: #C9A84C;
+            display: flex;
+            align-items: center;
+        }
+
+        .trustbar-inner {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1A1209;
+            font-weight: 600;
+        }
+
+        /* --- CATEGORIES --- */
+
+        .categories {
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #FDF6EC;
+        }
+
+        .categories-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .categories-grid {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cat-card {
+            width: 270px;
+        }
+
+        .cat-image {
+            width: 270px;
+            height: 340px;
+            background-color: #EDE4D4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .cat-image p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 11px;
+            color: #A89870;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .cat-card h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+            color: #1A1209;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .cat-card p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            color: #8A7A60;
+        }
+
+        /* --- FEATURED PRODUCTS --- */
+
+        .featured {
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #F5EDD8;
+        }
+
+        .featured-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .products-row {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-card {
+            width: 360px;
+        }
+
+        .product-image {
+            width: 360px;
+            height: 420px;
+            background-color: #EDE4D4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+
+        .product-image p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 11px;
+            color: #A89870;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .product-card h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+            color: #1A1209;
+            margin-bottom: 6px;
+        }
+
+        .product-card .product-metal {
+            font-family: "Work Sans", sans-serif;
+            font-size: 12px;
+            color: #C9A84C;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-card .product-price {
+            font-family: "Work Sans", sans-serif;
+            font-size: 18px;
+            color: #1A1209;
+            font-weight: 600;
+        }
+
+        /* --- ABOUT STRIP --- */
+
+        .about-strip {
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #1A1209;
+        }
+
+        .about-strip-inner {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-image-box {
+            width: 500px;
+            height: 480px;
+            background-color: #2E2416;
+            border: 1px solid #3A2E1A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-box p {
+            color: #5A4F38;
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .about-text {
+            width: 560px;
+            margin-left: 100px;
+        }
+
+        .about-text h3 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            color: #C9A84C;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 52px;
+            color: #FDF6EC;
+            line-height: 1.2;
+            margin-bottom: 28px;
+        }
+
+        .about-text p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 15px;
+            color: #9A8F7A;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* --- HERITAGE SECTION --- */
+
+        .heritage {
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #FDF6EC;
+        }
+
+        .heritage-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .heritage-row {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heritage-card {
+            width: 360px;
+            text-align: center;
+        }
+
+        .heritage-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #EDE4D4;
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heritage-icon p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 11px;
+            color: #A89870;
+            letter-spacing: 1px;
+        }
+
+        .heritage-card h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            color: #1A1209;
+            margin-bottom: 14px;
+        }
+
+        .heritage-card p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 14px;
+            color: #6A6050;
+            line-height: 26px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!-- ===================== NAVIGATION ===================== -->
+
+<div class="navbar">
+    <div class="nav-inner">
+
+        <div class="logo">ORNA<span>.</span></div>
+
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="contact.html">Custom Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===================== NAVIGATION END ===================== -->
+
+
+<!-- ===================== HERO BANNER ===================== -->
+
+<div class="hero">
+    <div class="hero-inner">
+
+        <!-- Hero Left Text -->
+        <div class="hero-text">
+            <h3>Dhaka, Bangladesh — Est. 2024</h3>
+            <h1>Where Gold <span>Meets</span> Art</h1>
+            <p>Handcrafted luxury jewelry from the finest metals — gold, diamond, and platinum — alongside the timeless beauty of Bangladesh's indigenous jewelry tradition.</p>
+            <div class="hero-buttons">
+                <a href="collection.html" class="btn-gold">Shop Now</a>
+                <a href="contact.html" class="btn-outline">Custom Order</a>
+            </div>
+        </div>
+
+        <!-- Hero Right Image -->
+        <div class="hero-image-box">
+            <img src="images/prod-gold-necklace.jpg" alt="Gold necklace hero">
+        </div>
+
+    </div>
+</div>
+
+<!-- ===================== HERO BANNER END ===================== -->
+
+
+<!-- ===================== TRUST BAR ===================== -->
+
+<div class="trustbar">
+    <div class="trustbar-inner">
+        <div class="trust-item"><p>✦ &nbsp; Certified Hallmark Gold</p></div>
+        <div class="trust-item"><p>✦ &nbsp; Free Custom Engraving</p></div>
+        <div class="trust-item"><p>✦ &nbsp; Nationwide Delivery</p></div>
+        <div class="trust-item"><p>✦ &nbsp; Lifetime Cleaning Service</p></div>
+    </div>
+</div>
+
+<!-- ===================== TRUST BAR END ===================== -->
+
+
+<!-- ===================== CATEGORIES ===================== -->
+
+<div class="categories">
+
+    <div class="categories-header">
+        <p class="section-subtitle">Explore By Category</p>
+        <h2 class="section-title">Our Collections</h2>
+        <div class="gold-line"></div>
+    </div>
+
+    <div class="categories-grid">
+
+        <!-- Category 1 -->
+        <div class="cat-card">
+            <div class="cat-image">
+                <img src="images/cat-gold.jpg" alt="Gold Jewelry">
+            </div>
+            <h4>Gold Jewelry</h4>
+            <p>18K &amp; 22K fine gold pieces</p>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="cat-card">
+            <div class="cat-image">
+                <img src="images/cat-diamond.jpg" alt="Diamond Collection">
+            </div>
+            <h4>Diamond Collection</h4>
+            <p>Certified solitaires &amp; sets</p>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="cat-card">
+            <div class="cat-image">
+                <img src="images/cat-platinum.jpg" alt="Platinum Series">
+            </div>
+            <h4>Platinum Series</h4>
+            <p>Modern platinum designs</p>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="cat-card">
+            <div class="cat-image">
+                <img src="images/cat-heritage.jpg" alt="Bangladeshi Heritage">
+            </div>
+            <h4>Bangladeshi Heritage</h4>
+            <p>Indigenous handcrafted pieces</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== CATEGORIES END ===================== -->
+
+
+<!-- ===================== FEATURED PRODUCTS ===================== -->
+
+<div class="featured">
+
+    <div class="featured-header">
+        <p class="section-subtitle">Handpicked For You</p>
+        <h2 class="section-title">Featured Pieces</h2>
+        <div class="gold-line"></div>
+    </div>
+
+    <div class="products-row">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/prod-gold-necklace.jpg" alt="Shona Haar Necklace">
+            </div>
+            <h4>Shona Haar Necklace</h4>
+            <p class="product-metal">22K Gold</p>
+            <p class="product-price">৳ 85,000</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/prod-diamond-ring.jpg" alt="Teardrop Diamond Ring">
+            </div>
+            <h4>Teardrop Diamond Ring</h4>
+            <p class="product-metal">Platinum + Diamond</p>
+            <p class="product-price">৳ 1,40,000</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/prod-nakshi-bangle.jpg" alt="Nakshi Bangle Pair">
+            </div>
+            <h4>Nakshi Bangle Pair</h4>
+            <p class="product-metal">Heritage Handmade</p>
+            <p class="product-price">৳ 12,500</p>
+        </div>
+
+    </div>
+
+    <!-- View All Button -->
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="collection.html" class="btn-gold">View All Pieces</a>
+    </div>
+
+</div>
+
+<!-- ===================== FEATURED PRODUCTS END ===================== -->
+
+
+<!-- ===================== ABOUT STRIP ===================== -->
+
+<div class="about-strip">
+    <div class="about-strip-inner">
+
+        <!-- About Image -->
+        <div class="about-image-box">
+            <img src="images/about-workshop.jpg" alt="Our jewelry workshop">
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+            <h3>Our Story</h3>
+            <h2>Rooted in Bangladesh, Crafted for the World</h2>
+            <p>Orna was born from a love of two worlds — the global language of luxury jewelry and the deeply personal, intricate craft traditions of Bangladesh's artisan communities.</p>
+            <p>Every piece we sell carries a story — whether it is a custom diamond ring made to your brief, or a hand-engraved gold bangle shaped by a master craftsman in Old Dhaka.</p>
+            <a href="contact.html" class="btn-outline">Commission a Piece</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===================== ABOUT STRIP END ===================== -->
+
+
+<!-- ===================== HERITAGE SECTION ===================== -->
+
+<div class="heritage">
+
+    <div class="heritage-header">
+        <p class="section-subtitle">Why Choose Orna</p>
+        <h2 class="section-title">Our Promise</h2>
+        <div class="gold-line"></div>
+    </div>
+
+    <div class="heritage-row">
+
+        <!-- Card 1 -->
+        <div class="heritage-card">
+            <div class="heritage-icon">
+                <p>✦</p>
+            </div>
+            <h4>Custom Design Service</h4>
+            <p>Share your vision with us and our designers will bring it to life — from sketch to finished piece.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="heritage-card">
+            <div class="heritage-icon">
+                <p>✦</p>
+            </div>
+            <h4>Certified Metals</h4>
+            <p>All gold, platinum and diamond pieces come with a hallmark certificate and authenticity guarantee.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="heritage-card">
+            <div class="heritage-icon">
+                <p>✦</p>
+            </div>
+            <h4>Bangladesh Craft Heritage</h4>
+            <p>We work directly with indigenous artisans to bring their traditional jewelry to a wider audience.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== HERITAGE SECTION END ===================== -->
+
+
+<!-- ===================== FOOTER ===================== -->
+
+<div class="footer">
+    <div class="footer-inner">
+
+        <!-- Col 1 - Brand -->
+        <div class="footer-col">
+            <h3>ORNA.</h3>
+            <p>Luxury and heritage jewelry from the heart of Bangladesh. Custom pieces made to your brief.</p>
+        </div>
+
+        <!-- Col 2 - Quick Links -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="contact.html">Custom Order</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Col 3 - Collections -->
+        <div class="footer-col">
+            <h3>Collections</h3>
+            <ul>
+                <li><a href="collection.html">Gold Jewelry</a></li>
+                <li><a href="collection.html">Diamond Collection</a></li>
+                <li><a href="collection.html">Platinum Series</a></li>
+                <li><a href="collection.html">Bangladeshi Heritage</a></li>
+            </ul>
+        </div>
+
+        <!-- Col 4 - Contact -->
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Dhaka, Bangladesh</p>
+            <br>
+            <p>ornajewels@gmail.com</p>
+            <br>
+            <p>+880 1700 000 000</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Orna Jewels. All rights reserved. &nbsp;|&nbsp; Handcrafted in Bangladesh</p>
+    </div>
+</div>
+
+<!-- ===================== FOOTER END ===================== -->
+
+
+</body>
+</html>
